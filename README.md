@@ -8,5 +8,6 @@
 
 ## 2. Linear Regression
 - Linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables).
-- ![Linear Regression](LinearRegression/linreg.png)
+- Results
+  - ![Linear Regression](LinearRegression/linreg.png)
 - $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
