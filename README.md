@@ -13,7 +13,7 @@
 ## 3. Logistic Regression
 - Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable.
 - Model: ![Logistic Regression](images/logreg.png)
-- Equations: ![Logistic regression equations](images/logreg_equations.png)
+- Equations: ![Logistic regression equations](images/Logreg_equations.png)
 
 ## 4. Decision Trees
 - Decision tree learning is a method commonly used in data mining. The goal is to create a model that predicts the value of a target variable based on several input variables.
