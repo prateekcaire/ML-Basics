@@ -8,7 +8,7 @@
 ## 2. Linear Regression
 - Linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables).
 - Model: ![Linear Regression](images/linreg.png)
-- Equations: ![Linear regression equations](images/linreg_equations.png)
+- Equations: ![Linear regression equations](images/linearreg_equations.png)
 
 ## 3. Logistic Regression
 - Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable.
