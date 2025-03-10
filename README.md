@@ -8,13 +8,13 @@
 ## 2. Linear Regression
 - Linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables).
 - Model: ![Linear Regression](images/linreg.png)
-- Equations:![Linear regression equations 1](images/logreg_eq_1.png) ![Linear regression equations 2](images/logreg_eq_2.png)
+- Equations: ![Linear regression equations](images/linearreg_equations.png)
+
 
 ## 3. Logistic Regression
 - Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable.
 - Model: ![Logistic Regression](images/logreg.png)
-- Equations: ![Logistic regression equations](images/Logreg_equations.png)
-- Equations: ![Logic regression Equations](images/LogisticReg_equations.png)
+- Equations: ![Linear regression equations 1](images/logreg_eq_1.png) ![Linear regression equations 2](images/logreg_eq_2.png)
 ## 4. Decision Trees
 - Decision tree learning is a method commonly used in data mining. The goal is to create a model that predicts the value of a target variable based on several input variables.
 - Model: ![Decision Trees 1](images/DecisionTree/chart19.png), ![Decision Trees 2](images/DecisionTree/chart23.png), ![Decision Trees 3](images/DecisionTree/chart29.png)
