@@ -2,11 +2,11 @@ import random
 from collections import Counter
 
 import numpy as np
-from pandas import DataFrame
 
 
 class Node:
-    def __init__(self, feature_index=None, split=None, left=None, right=None, value=None, prev_feature_index=None, min_y=None, max_y=None, min_x=None, max_x=None):
+    def __init__(self, feature_index=None, split=None, left=None, right=None, value=None, prev_feature_index=None,
+                 min_y=None, max_y=None, min_x=None, max_x=None):
         self.feature_index = feature_index
         self.split = split
         self.left = left
@@ -17,7 +17,6 @@ class Node:
         self.max_y = max_y
         self.min_x = min_x
         self.max_x = max_x
-
 
 
 class DecisionTree:
@@ -47,25 +46,25 @@ class DecisionTree:
                 left_indices, right_indices = self._get_split_indices(x_column, split)
                 left_entropy, right_entropy = self._entropy(y[left_indices]), self._entropy(y[right_indices])
                 n, n_l, n_r = len(y), len(left_indices), len(right_indices)
-                entropy = (n_l/n)*left_entropy + (n_r/n)*right_entropy
+                entropy = (n_l / n) * left_entropy + (n_r / n) * right_entropy
                 if entropy < best['entropy']:
                     best['entropy'] = entropy
                     best['feature_index'] = feature_index
                     best['split'] = split
         best_feature_index = best['feature_index']
         best_split = best['split']
-        left_indices, right_indices = self._get_split_indices(X[:,best_feature_index], best_split)
+        left_indices, right_indices = self._get_split_indices(X[:, best_feature_index], best_split)
         left_tree = self.create_tree(X[left_indices, :], y[left_indices], level + 1, best_feature_index)
         right_tree = self.create_tree(X[right_indices, :], y[right_indices], level + 1, best_feature_index)
         min_y, max_y = min(X[:, prev_feature_index]), max(X[:, prev_feature_index])
         min_x, max_x = min(X[:, best_feature_index]), max(X[:, best_feature_index])
-        return Node(best_feature_index,best_split,left_tree,right_tree, None, prev_feature_index, min_y, max_y, min_x, max_x)
+        return Node(best_feature_index, best_split, left_tree, right_tree, None, prev_feature_index, min_y, max_y,
+                    min_x, max_x)
 
     @staticmethod
     def _most_common_label(y):
         counter = Counter(y)
         return counter.most_common(1)[0][0]
-
 
     @staticmethod
     def _entropy(labels):
@@ -84,7 +83,8 @@ class DecisionTree:
         else:
             return self.traverse(root.right, x)
 
-    def _get_split_indices(self, x_column, curr):
+    @staticmethod
+    def _get_split_indices(x_column, curr):
         left_indices = np.argwhere(x_column <= curr).flatten()
         right_indices = np.argwhere(x_column > curr).flatten()
         return left_indices, right_indices
