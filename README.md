@@ -22,7 +22,7 @@
 ## 4. Decision Trees
 - Implementation is done to create a binary for a specific value among all continuous feature value
 - Most optimal feature, split pair is found where entropy is minimum 
-- Entropy H(p) = -plog(p) -(1-p)log(p)
+- Entropy H(p) = -plog(p) -(1-p)log(p). Same as cross entropy loss
 - when best feature, split pair is found, tree node with subset of X, subset of y, and feature index is created
 - above process is repeated unless entropy is 0 or max depth is reached
 - label from leaf node is used as prediction. If leaf node is pure, single label is returned, else most common label is predicted
@@ -35,5 +35,8 @@
 - Model: ![Random Forest](images/rand_forest.png)
 
 ## 6. Naive Bayes
-- Naive Bayes classifiers are a family of simple "probabilistic classifiers" based on applying Bayes' theorem with strong (naive) independence assumptions between the features.
-- Posterior Probability Equation: ![Naive Bayes](images/naive_bayes_proof.png)
+- Predict the posterior, P(y|X), by naively assuming that all features have zero correlation
+- Each independent class conditional probability, P(x_i|y) is modeled as gaussian and its parameters (mean and variance) are pre-calculated for each classification
+- Prediction finds the argmax_y of sum of prior(log(P(y))) and likelihoods sum. Quite basic
+- Posterior Probability Equation: ![Naive Bayes](images/naive-bayes.png)
+- Model: ![Naive Bayes Chart](images/naive_bayes_visualization.png)
