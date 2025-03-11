@@ -47,3 +47,7 @@
 - goal is to maximize the margin while ensuring all points are classified correctly
 - optimization problem that minimize ||w|| subject to y_i(w·x_i + b) ≥ 1 for all i
 - Chart: ![SVM](images/svm.png)
+
+## 8. K-Means
+- iteratively label the data point and find centroid until centroid converges 
+- Chart: ![kmeans1](images/k-means/fig0.png)![kmeans2](images/k-means/fig3.png)![kmeans1](images/k-means/fig6.png)![kmeans9](images/k-means/fig9.png)
